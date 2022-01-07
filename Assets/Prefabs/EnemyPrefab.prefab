@@ -154,4 +154,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "\u30C6\u30B9\u30C8"
   hp: 50
-  attack: 2
+  attack: 20
+  hitEffect: {fileID: 2114476817413293437, guid: 2f58d4489f469a242b324bd42d985a7f, type: 3}

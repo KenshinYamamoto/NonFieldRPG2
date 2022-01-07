@@ -8,13 +8,14 @@ public class PlayerManager : MonoBehaviour
     public int attack;
 
     // UŒ‚‚·‚é
-    public void Attack(EnemyManager enemy)
+    public int Attack(EnemyManager enemy)
     {
-        enemy.Damage(attack);
+        int damage = enemy.Damage(attack);
+        return damage;
     }
 
     // ƒ_ƒ[ƒW‚ğó‚¯‚é
-    public void Damage(int damage)
+    public int Damage(int damage)
     {
         hp -= damage;
 
@@ -22,5 +23,6 @@ public class PlayerManager : MonoBehaviour
         {
             hp = 0;
         }
+        return damage;
     }
 }
