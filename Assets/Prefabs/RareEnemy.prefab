@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4933655997458257026
+--- !u!1 &8180077181024940994
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5351106723714222989}
-  - component: {fileID: 4959150949235372063}
-  - component: {fileID: 2654406365018691235}
-  - component: {fileID: 4426557997263130112}
-  - component: {fileID: 7717032761370796076}
+  - component: {fileID: 9200948669598952653}
+  - component: {fileID: 8151749131657516895}
+  - component: {fileID: 1235391062420566499}
+  - component: {fileID: 620632729648900416}
+  - component: {fileID: 6839504721887250284}
   m_Layer: 0
-  m_Name: EnemyPrefab
+  m_Name: RareEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5351106723714222989
+--- !u!4 &9200948669598952653
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933655997458257026}
+  m_GameObject: {fileID: 8180077181024940994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4959150949235372063
+--- !u!212 &8151749131657516895
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933655997458257026}
+  m_GameObject: {fileID: 8180077181024940994}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 98de9660dcd60814bbcab03c3d809c49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37db3613ed51d024188d1cae32d3e59a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2654406365018691235
+--- !u!61 &1235391062420566499
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933655997458257026}
+  m_GameObject: {fileID: 8180077181024940994}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -102,22 +102,22 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.883333, y: 3.3083334}
+    oldSize: {x: 5.3142858, y: 3.6357143}
     newSize: {x: 4.883333, y: 3.3083334}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.883333, y: 3.3083334}
+  m_Size: {x: 5.31, y: 3.63}
   m_EdgeRadius: 0
---- !u!114 &4426557997263130112
+--- !u!114 &620632729648900416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933655997458257026}
+  m_GameObject: {fileID: 8180077181024940994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
@@ -128,7 +128,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7717032761370796076}
+        - m_Target: {fileID: 6839504721887250284}
           m_TargetAssemblyTypeName: EnemyManager, Assembly-CSharp
           m_MethodName: OnTap
           m_Mode: 1
@@ -140,19 +140,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &7717032761370796076
+--- !u!114 &6839504721887250284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4933655997458257026}
+  m_GameObject: {fileID: 8180077181024940994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a6ec727114a24c4e9c71f629b077ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u30C6\u30B9\u30C8"
-  hp: 30
-  attack: 2
-  hitEffect: {fileID: 7993985565091775674, guid: 706a620205e1d974db223c2a0d03e93e, type: 3}
+  name: "\u30EC\u30A2\u30E2\u30F3\u30B9\u30BF\u30FC"
+  hp: 100
+  attack: 1
+  hitEffect: {fileID: 2114476817413293437, guid: 2f58d4489f469a242b324bd42d985a7f, type: 3}

@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 245601887}
   - component: {fileID: 245601889}
   - component: {fileID: 245601888}
+  - component: {fileID: 245601890}
   m_Layer: 5
   m_Name: NamePanel
   m_TagString: Untagged
@@ -450,6 +451,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245601886}
   m_CullTransparentMesh: 1
+--- !u!225 &245601890
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245601886}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &345273129
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345273129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 161.30594, y: 1389.8484, z: -394.79926}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -865,8 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e833357221350c040b32633e2800a808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 50
-  attack: 12
+  hp: 100
+  attack: 20
 --- !u!4 &511472913
 Transform:
   m_ObjectHideFlags: 0
@@ -1287,6 +1300,7 @@ GameObject:
   - component: {fileID: 1067089827}
   - component: {fileID: 1067089829}
   - component: {fileID: 1067089828}
+  - component: {fileID: 1067089830}
   m_Layer: 5
   m_Name: HPPanel
   m_TagString: Untagged
@@ -1352,6 +1366,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067089826}
   m_CullTransparentMesh: 1
+--- !u!225 &1067089830
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067089826}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1146898218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1489,7 @@ MonoBehaviour:
   playerUI: {fileID: 1503943641}
   enemyUI: {fileID: 363975587}
   player: {fileID: 511472912}
+  canAttack: 0
 --- !u!4 &1281768454
 Transform:
   m_ObjectHideFlags: 0
@@ -1507,7 +1534,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageUI: {fileID: 2142653434}
-  enemyPrefab: {fileID: 4933655997458257026, guid: 918bebcc6922a92429a7a7ee7cfc8b93, type: 3}
+  enemyPrefab:
+  - {fileID: 4933655997458257026, guid: 918bebcc6922a92429a7a7ee7cfc8b93, type: 3}
+  - {fileID: 4402651823507832512, guid: abb097f9bb5a8564d9fa1caf39316094, type: 3}
   battleManager: {fileID: 1281768453}
   sceneTransitionManager: {fileID: 345273130}
   questBackground: {fileID: 421526075}

@@ -8,13 +8,10 @@ using DG.Tweening;
 public class QuestManager : MonoBehaviour
 {
     public StageUIManager stageUI;
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     public BattleManager battleManager;
     public SceneTransitionManager sceneTransitionManager;
     public GameObject questBackground;
-
-    //敵に遭遇するテーブル:-1なら遭遇しない、0なら遭遇
-    int[] encountTable = { -1, -1, 0, -1, 0, -1 };
 
     int currentStage = 0; // 現在のステージ進行度
 
@@ -43,11 +40,13 @@ public class QuestManager : MonoBehaviour
         // 進行度をUIに反映
         stageUI.UpdateUI(currentStage);
 
-        if (encountTable.Length <= currentStage)
+        int dice = Random.Range(0, 100);
+
+        if (ParamsSO.Entity.stage <= currentStage)
         {
             QuestClear();
         }
-        else if (encountTable[currentStage] == 0)
+        else if(dice < ParamsSO.Entity.rate)
         {
             EncountEnemy();
         }
@@ -73,7 +72,8 @@ public class QuestManager : MonoBehaviour
     void EncountEnemy()
     {
         DialogTextManager.instance.SetScenarios(new string[] { "モンスターに遭遇した" });
-        GameObject enemyObj = Instantiate(enemyPrefab);
+        int dice = Random.Range(0, enemyPrefab.Length);
+        GameObject enemyObj = Instantiate(enemyPrefab[dice]);
         EnemyManager enemy = enemyObj.GetComponent<EnemyManager>();
         stageUI.ShowButton(false);
         battleManager.Setup(enemy);
@@ -92,9 +92,6 @@ public class QuestManager : MonoBehaviour
 
         // 街に戻るボタンのみ表示する
         stageUI.ShowClearText();
-
-
-        //sceneTransitionManager.LoadTo("Town");
     }
 
     public IEnumerator PlayerDeath()

@@ -31,7 +31,6 @@ public class BattleManager : MonoBehaviour
         enemy = enemyManager;
         enemyUI.SetupUI(enemy);
         playerUI.SetupUI(player);
-
         enemy.AddEventListenerOnTap(PlayerAttack);
     }
 
@@ -51,8 +50,9 @@ public class BattleManager : MonoBehaviour
         enemyUI.UpdateUI(enemy);
         DialogTextManager.instance.SetScenarios(new string[] { "プレイヤーの攻撃！\nモンスターに"+damage+"ダメージを与えた！" });
 
+        EffectGenerate();
 
-        if(enemy.hp <= 0)
+        if (enemy.hp <= 0)
         {
             StartCoroutine(EndBattle());
         }
@@ -94,5 +94,12 @@ public class BattleManager : MonoBehaviour
         Destroy(enemy.gameObject);
         SoundManager.instance.PlayBGM("Quest");
         questManager.EndBattle();
+    }
+
+    void EffectGenerate()
+    {
+        // エフェクトを表示する
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Instantiate(enemy.hitEffect, mousePos, transform.rotation, transform.parent);
     }
 }

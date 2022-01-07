@@ -26,7 +26,7 @@ public class EnemyManager : MonoBehaviour
     // ƒ_ƒ[ƒW‚ğó‚¯‚é
     public int Damage(int damage)
     {
-        Instantiate(hitEffect, this.transform, false);
+        //Instantiate(hitEffect, this.transform, false);
         transform.DOShakePosition(0.3f, 0.5f, 20, 0, false, true);
         hp -= damage;
 
